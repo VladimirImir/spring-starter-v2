@@ -36,13 +36,14 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                         .logoutUrl("/logout")
                         .logoutSuccessUrl("/login")
                         .deleteCookies("JSESSIONID"))
-
+//        Spring. 112. OAuth 2.0. Практика
                 .formLogin(login -> login
                         .loginPage("/login")
                         .defaultSuccessUrl("/users"))
                 .oauth2Login(config -> config
                         .loginPage("/login")
                         .defaultSuccessUrl("/users"));
+//        Spring. 112. OAuth 2.0. Практика
 
     }
 
